@@ -338,7 +338,8 @@ struct WiFiSettingsView: View {
     var body: some View {
         VStack(spacing: 18) {
             WiFiPanel(title: "Monitoring", symbol: "slider.horizontal.3") {
-                Toggle("Show status beside the menu-bar icon", isOn: $store.showMenuText)
+                Toggle("Show signal strength beside the menu-bar icon", isOn: $store.showMenuText)
+                    .help("Shows the current Wi-Fi signal in dBm. A number closer to zero means a stronger signal; it does not measure internet speed or safety.")
                 Toggle("Automatic lightweight connection checks", isOn: $store.automaticChecks)
                 Text("When enabled, connection checks contact Apple's test endpoints at most once every five minutes. Automatic checks skip metered and Low Data Mode connections. Local Wi-Fi readings refresh every 10 seconds while visible and every 30 seconds in the background. Speed tests are always manual.")
                     .font(.system(size: 11)).foregroundStyle(Palette.muted).fixedSize(horizontal: false, vertical: true)

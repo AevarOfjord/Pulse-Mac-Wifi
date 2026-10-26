@@ -2,7 +2,7 @@ Pulse WiFi 1.0 preview
 Apple silicon (M1 and newer) | macOS 14 or later
 
 INSTALL
-Extract the ZIP and move Pulse WiFi.app to Applications. Open the app and use its Wi-Fi icon in the menu bar.
+Extract the ZIP and move Pulse WiFi.app to Applications. Pulse WiFi appears in the Dock and Command-Tab, with a Wi-Fi menu-bar panel for quick access. The menu-bar text shows live signal strength in dBm; protection warnings appear separately. Closing the dashboard keeps monitoring running. Quit with Command-Q or Quit in the menu-bar panel.
 
 This preview is locally signed, not Developer ID signed or notarized. Only open downloads from a source you trust. If macOS blocks this preview, review System Settings > Privacy & Security > Open Anyway. See https://support.apple.com/102445. Do not disable Gatekeeper globally.
 

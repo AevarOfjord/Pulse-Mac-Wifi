@@ -1,10 +1,10 @@
 # Pulse WiFi
 
-A lightweight, native menu-bar companion to [Pulse](https://github.com/AevarOfjord/Pulse-Mac-Monitoring) for Apple-silicon Macs running macOS 14 or later. Dashboards, settings, charts, and compact native menu panels follow macOS Light/Dark appearance, with matching Pulse accents and typography.
+A lightweight, native Mac app and companion to [Pulse](https://github.com/AevarOfjord/Pulse-Mac-Monitoring) for Apple-silicon Macs running macOS 14 or later. Dashboards, settings, charts, and compact native menu panels follow macOS Light/Dark appearance, with matching Pulse accents and typography.
 
 ## Install
 
-Download the [Pulse WiFi 1.0 preview ZIP](https://github.com/AevarOfjord/Pulse-Mac-Wifi/releases/download/v1.0.0-preview.1/Pulse-WiFi-1.0-AppleSilicon-Preview.zip), or visit [Releases](https://github.com/AevarOfjord/Pulse-Mac-Wifi/releases/tag/v1.0.0-preview.1) for its checksum and notes. Extract the ZIP, move **Pulse WiFi.app** to Applications, and open it. Source-code archives are for building the project, not installing the app.
+Download the [Pulse WiFi 1.0 preview ZIP](https://github.com/AevarOfjord/Pulse-Mac-Wifi/releases/download/v1.0.0-preview.2/Pulse-WiFi-1.0-AppleSilicon-Preview.zip), or visit [Releases](https://github.com/AevarOfjord/Pulse-Mac-Wifi/releases/tag/v1.0.0-preview.2) for its checksum and notes. Extract the ZIP, move **Pulse WiFi.app** to Applications, and open it. Source-code archives are for building the project, not installing the app.
 
 The preview is locally signed and **not notarized**. If macOS blocks a download you trust, review **System Settings → Privacy & Security → Open Anyway**, following [Apple's instructions](https://support.apple.com/102445). Do not disable Gatekeeper globally.
 
@@ -16,6 +16,7 @@ The preview is locally signed and **not notarized**. If macOS blocks a download 
 - Small HTTPS connectivity checks and a separate possible-sign-in probe.
 - On-demand download/upload tests using Apple's `networkQuality`, with cancellation and validation of results.
 - Menu-bar panel, dashboard, signal history, settings, optional notifications, and network-change handling.
+- Live Wi-Fi signal strength in the menu bar, such as `−54 dBm`, with a separate protection warning indicator. Paused, disconnected, and unavailable readings are labeled explicitly; the text can be hidden in Settings.
 - The compact native menu-bar panel shows your Wi-Fi name, frequency band, channel, signal, security, and protection summary. Run or cancel speed/connection tests directly from it; completed speed tests show download, upload, idle latency, loaded responsiveness, and their timestamp. Dashboard, pause/resume, Settings, and Quit share one compact action row.
 - Metered/Low Data Mode connections skip automatic external tests. Wi-Fi and security readings slow down in the background.
 
@@ -31,7 +32,7 @@ bash scripts/build-app.sh --open
 bash scripts/package-release.sh
 ```
 
-The locally signed app is placed in `build/Pulse WiFi.app`; the preview ZIP and SHA-256 checksum are alongside it. The app lives in the menu bar and stays running when its dashboard is closed. Choose Quit in its panel or press Command-Q to stop it. This is an independent package; building it does not rebuild or modify Pulse. Quit a running local build before replacing it.
+The locally signed app is placed in `build/Pulse WiFi.app`; the preview ZIP and SHA-256 checksum are alongside it. Pulse WiFi appears in the Dock and Command-Tab like a regular Mac app, with a menu-bar panel for quick access. It stays running when its dashboard is closed. Click its Dock icon to reopen the dashboard. Choose Quit in its panel or press Command-Q to stop it. This is an independent package; building it does not rebuild or modify Pulse. Quit a running local build before replacing it.
 
 To show the network name, click **Enable Wi-Fi details** and grant Location permission. macOS requires this authorization for Wi-Fi identifiers. The app does not request location updates or collect coordinates. Missing permissions and unsupported readings remain unavailable.
 

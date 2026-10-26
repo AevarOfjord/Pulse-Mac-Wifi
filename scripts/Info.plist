@@ -8,9 +8,8 @@
     <key>CFBundleName</key><string>Pulse WiFi</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleShortVersionString</key><string>1.0</string>
-    <key>CFBundleVersion</key><string>1</string>
+    <key>CFBundleVersion</key><string>3</string>
     <key>LSMinimumSystemVersion</key><string>14.0</string>
-    <key>LSUIElement</key><true/>
     <key>NSHighResolutionCapable</key><true/>
     <key>NSLocationUsageDescription</key><string>Pulse WiFi uses Location permission only to read your Wi-Fi network name. It does not request location updates or store coordinates.</string>
     <key>NSLocationWhenInUseUsageDescription</key><string>Pulse WiFi needs this permission to show your current Wi-Fi network name. It does not track your location.</string>

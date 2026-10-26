@@ -23,6 +23,10 @@ import WiFiCore
         } label: {
             Image(systemName: "wifi")
             if store.showMenuText { Text(store.menuLabel).font(.system(size: 11)).monospacedDigit() }
+            if store.needsAttention {
+                Image(systemName: "exclamationmark.triangle")
+                    .accessibilityLabel("Protection check needs attention")
+            }
         }.menuBarExtraStyle(.window)
         Settings {
             WiFiSettingsView().environmentObject(store).padding(24).frame(width: 600).background(Palette.background)

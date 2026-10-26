@@ -134,7 +134,12 @@ struct SignalPoint: Identifiable {
         guard let report else { return .unknown }
         return report.title == "Checks passed" && wifi.signalLevel != .attention ? .good : .attention
     }
-    var menuLabel: String { paused ? "Paused" : needsAttention ? "Review" : wifi.associated ? "Wi-Fi" : "Offline" }
+    var menuLabel: String {
+        if paused { return "Paused" }
+        if !wifi.poweredOn { return "Wi-Fi off" }
+        if !wifi.associated { return "Offline" }
+        return wifi.signal.map { "\($0) dBm" } ?? "— dBm"
+    }
 
     func refresh(force: Bool = false) async {
         guard !refreshing, !paused || force else { return }
