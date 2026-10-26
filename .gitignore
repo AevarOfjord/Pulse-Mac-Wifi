@@ -1,0 +1,21 @@
+.build/
+.swiftpm/
+build/
+.DS_Store
+*.log
+*.dSYM/
+
+# Local configuration, credentials, and signing material
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# Private diagnostic output and local QA artifacts
+/diagnostics*.json
+/qa-*

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+    <key>CFBundleDisplayName</key><string>Pulse WiFi</string>
+    <key>CFBundleExecutable</key><string>PulseWiFi</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>CFBundleIdentifier</key><string>local.pulse.wifi</string>
+    <key>CFBundleName</key><string>Pulse WiFi</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>1.0</string>
+    <key>CFBundleVersion</key><string>1</string>
+    <key>LSMinimumSystemVersion</key><string>14.0</string>
+    <key>LSUIElement</key><true/>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSLocationUsageDescription</key><string>Pulse WiFi uses Location permission only to read your Wi-Fi network name. It does not request location updates or store coordinates.</string>
+    <key>NSLocationWhenInUseUsageDescription</key><string>Pulse WiFi needs this permission to show your current Wi-Fi network name. It does not track your location.</string>
+    <key>NSAppTransportSecurity</key><dict>
+        <key>NSExceptionDomains</key><dict>
+            <key>captive.apple.com</key><dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+                <key>NSIncludesSubdomains</key><false/>
+            </dict>
+        </dict>
+    </dict>
+    <key>NSSupportsAutomaticTermination</key><false/>
+    <key>NSHumanReadableCopyright</key><string>Pulse WiFi — local Wi-Fi health and protection checks</string>
+</dict></plist>
